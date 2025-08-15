@@ -31,10 +31,10 @@ jobs:
         run: DB_HOST=${{ secrets.DB_HOS }} DB_USER=${{ secrets.DB_USER }} DB_PASSWORD=${{ secrets.DB_PASSWORD }} DB_NAME=${{ secrets.DB_NAME }} DB_PORT=${{ secrets.DB_PORT }} go test -v main_test.go
 
       - name: Build
-        if: always()
         run: go build main.go
 
       - name: Upload
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: projeto_compilado
