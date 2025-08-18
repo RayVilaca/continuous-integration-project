@@ -29,8 +29,8 @@ jobs:
 
       - name: Verificar variáveis
         run: |
-          echo "TEST=${{ secrets.TEST }}" >> .env
-          echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
+          echo 'TEST=${{ secrets.TEST }}' >> .env
+          echo 'DB_HOST=${{ secrets.DB_HOST }}' >> .env
 
       - name: Mostrar conteúdo do .env
         run: cat .env
